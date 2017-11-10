@@ -54,10 +54,6 @@ public class MainActivity extends AppCompatActivity {
             value &= ~(S11059_CTRL_MODE);
             value &= 0xFC;
             value |= S11059_CTRL_TIME_224M;
-            mDevice.writeRegByte(S11059_CONTROL, value);
-
-            // Restart sensor.
-            value = mDevice.readRegByte(S11059_CONTROL);
             value &= 0x3F; // RESET off,SLEEP off
             mDevice.writeRegByte(S11059_CONTROL, value);
 
