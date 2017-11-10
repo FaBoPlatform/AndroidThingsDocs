@@ -7,3 +7,4 @@
 	* [Servo](servo.md)
 * I2C
 	* [3Axis](3axis.md)
+	* [Color](color.md)
