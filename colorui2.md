@@ -138,8 +138,8 @@ public class MainActivity extends AppCompatActivity {
                 int i = (((int)color_buff[6]) << 8) | color_buff[7];
 
                 Log.i(TAG, "r=" + r + " g=" + g + " b=" + b + " i=" + i);
-                mTextViewR.setText("G: " + r);
-                mTextViewG.setText("R: " + g);
+                mTextViewR.setText("R: " + r);
+                mTextViewG.setText("G: " + g);
                 mTextViewB.setText("B: " + b);
                 mTextViewI.setText("I: " + i);
                 mRelativeLayout.setBackgroundColor(Color.rgb(r, g, b));
