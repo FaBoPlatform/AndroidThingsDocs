@@ -9,7 +9,7 @@
 	* [3Axis](3axis.md)
 	* [3Axis UI](3axisui.md)
 	* [Color](color.md)
-	* [Color](colorui.md)
+	* [Color UI](colorui.md)
 * UI
 	* [FindViewById](ui01.md)
 	* [UI Layout1](ui02.md)
