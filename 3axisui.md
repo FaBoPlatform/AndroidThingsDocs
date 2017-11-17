@@ -1,8 +1,49 @@
 # 3Axis
 
-I2Cに3Axisを接続し、100ms毎に加速度を取得。
+I2Cに3Axisを接続し、100ms毎に加速度を取得。TextViewをUIに表示する。
 
 ## ソース
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gclue.uisample.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DX"
+        android:id="@+id/testViewX"
+        android:background="#ff0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DY"
+        android:id="@+id/testViewY"
+        android:background="#ff0000"
+        app:layout_constraintLeft_toLeftOf="testViewX"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DY"
+        android:id="@+id/testViewZ"
+        android:background="#ff0000"
+        app:layout_constraintLeft_toLeftOf="testViewY"
+         />
+
+</android.support.constraint.ConstraintLayout>
+```
 
 
 ```java
@@ -15,6 +56,7 @@ import android.util.Log;
 import com.google.android.things.pio.I2cDevice;
 import com.google.android.things.pio.PeripheralManagerService;
 import java.io.IOException;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     // I2C Device Name
@@ -82,9 +124,21 @@ public class MainActivity extends AppCompatActivity {
     private byte ADXL345_WAKEUP_2HZ = 0b10;
     /** WAKEUP 1Hz */
     private byte ADXL345_WAKEUP_1HZ = 0b11;
+
+    /** TextView */
+    TextView mTextViewDX;
+    TextView mTextViewDY;
+    TextView mTextViewDZ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mTextViewDX = (TextView) findViewById(R.id.testViewX);
+        mTextViewDY = (TextView) findViewById(R.id.testViewY);
+        mTextViewDZ = (TextView) findViewById(R.id.testViewZ);
+
         // Attempt to access the I2C device
         try {
             PeripheralManagerService manager = new PeripheralManagerService();
@@ -139,6 +193,10 @@ public class MainActivity extends AppCompatActivity {
                 int x = (((int)axis_buff[1]) << 8) | axis_buff[0];
                 int y = (((int)axis_buff[3]) << 8) | axis_buff[2];
                 int z = (((int)axis_buff[5]) << 8) | axis_buff[4];
+
+                mTextViewDX.setText("X: " + x);
+                mTextViewDY.setText("Y: " + y);
+                mTextViewDZ.setText("Z: " + z);
 
                 Log.i(TAG, "x=" + x + " y=" + y + " z=" + z);
 
