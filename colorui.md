@@ -7,52 +7,39 @@
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gclue.uisample.MainActivity">
+    tools:context=".MainActivity">
 
-    <TextView
+    <TextView android:text="R"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="R"
-        android:id="@+id/testViewR"
-        android:background="#ff0000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/textViewR"
+        />
 
-     <TextView
+    <TextView android:text="G"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="G"
-        android:id="@+id/testViewG"
-        android:background="#ff0000"
-        app:layout_constraintLeft_toLeftOf="testViewR"
-         />
+        android:id="@+id/textViewG"
+        android:layout_below="@id/textViewR"
+        />
 
-    <TextView
+    <TextView android:text="B"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="B"
-        android:id="@+id/testViewB"
-        android:background="#ff0000"
-        app:layout_constraintLeft_toLeftOf="testViewG"
-         />
+        android:id="@+id/textViewB"
+        android:layout_below="@+id/textViewG"
+        />
 
-    <TextView
+    <TextView android:text="I"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="B"
-        android:id="@+id/testViewI"
-        android:background="#ff0000"
-        app:layout_constraintLeft_toLeftOf="testViewB"
-         />
+        android:id="@+id/textViewI"
+        android:layout_below="@+id/textViewB"
+        />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
 ```
 
 
@@ -99,10 +86,10 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        mTextViewR = (TextView) findViewById(R.id.testViewR);
-        mTextViewG = (TextView) findViewById(R.id.testViewG);
-        mTextViewB = (TextView) findViewById(R.id.testViewB);
-        mTextViewI = (TextView) findViewById(R.id.testViewI);
+        mTextViewR = (TextView) findViewById(R.id.textViewR);
+        mTextViewG = (TextView) findViewById(R.id.textViewG);
+        mTextViewB = (TextView) findViewById(R.id.textViewB);
+        mTextViewI = (TextView) findViewById(R.id.textViewI);
 
         // Attempt to access the I2C device
         try {
