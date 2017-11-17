@@ -6,43 +6,36 @@ I2Cに3Axisを接続し、100ms毎に加速度を取得。TextViewをUIに表示
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gclue.uisample.MainActivity">
+    tools:context=".MainActivity">
 
-    <TextView
+    <TextView android:text="Hello World!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DX"
-        android:id="@+id/testViewX"
-        android:background="#ff0000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/textViewX"
 
-     <TextView
+        />
+
+    <TextView android:text="Hello World!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DY"
-        android:id="@+id/testViewY"
-        android:background="#ff0000"
-        app:layout_constraintLeft_toLeftOf="testViewX"
-         />
+        android:id="@+id/textViewY"
+        android:layout_toRightOf="@id/textViewX"
+        android:layout_toEndOf="@+id/textViewX"
+        />
 
-    <TextView
+    <TextView android:text="Hello World!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DY"
-        android:id="@+id/testViewZ"
-        android:background="#ff0000"
-        app:layout_constraintLeft_toLeftOf="testViewY"
-         />
+        android:id="@+id/textViewZ"
+        android:layout_toRightOf="@id/textViewY"
+        android:layout_toEndOf="@+id/textViewY"
 
-</android.support.constraint.ConstraintLayout>
+        />
+
+</RelativeLayout>
 ```
 
 
@@ -135,9 +128,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextViewDX = (TextView) findViewById(R.id.testViewX);
-        mTextViewDY = (TextView) findViewById(R.id.testViewY);
-        mTextViewDZ = (TextView) findViewById(R.id.testViewZ);
+        mTextViewDX = (TextView) findViewById(R.id.textViewX);
+        mTextViewDY = (TextView) findViewById(R.id.textViewY);
+        mTextViewDZ = (TextView) findViewById(R.id.textViewZ);
 
         // Attempt to access the I2C device
         try {
