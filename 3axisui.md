@@ -11,27 +11,24 @@ I2Cに3Axisを接続し、100ms毎に加速度を取得。TextViewをUIに表示
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView android:text="Hello World!"
+    <TextView android:text="DX"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textViewX"
-
         />
 
-    <TextView android:text="Hello World!"
+    <TextView android:text="DY"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textViewY"
-        android:layout_toRightOf="@id/textViewX"
-        android:layout_toEndOf="@+id/textViewX"
+        android:layout_below="@id/textViewX"
         />
 
-    <TextView android:text="Hello World!"
+    <TextView android:text="DZ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textViewZ"
-        android:layout_toRightOf="@id/textViewY"
-        android:layout_toEndOf="@+id/textViewY"
+        android:layout_below="@+id/textViewY"
 
         />
 
