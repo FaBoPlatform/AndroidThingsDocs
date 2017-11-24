@@ -1,6 +1,6 @@
-# 暗示的Intent
+# 暗黙的Intent
 
-暗示的Intentでは、下記の4項目を指定する事で、それに関連するActivityを起動する事が可能になります。
+暗黙的Intentでは、下記の4項目を指定する事で、それに関連するActivityを起動する事が可能になります。
 
 * ACTION
 * CATEGORY
