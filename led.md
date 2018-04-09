@@ -5,20 +5,17 @@ GPIO4にLEDブリックを接続し、1秒ごとにLEDを点滅。
 ## ソース
 
 ```java
-package com.gclue.myapplication;
 
+import android.app.Activity;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-
 import com.google.android.things.pio.Gpio;
-import com.google.android.things.pio.GpioCallback;
-import com.google.android.things.pio.PeripheralManagerService;
+import com.google.android.things.pio.PeripheralManager;
 
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private final static String TAG = "THINGS";
     private Gpio mLedGpio;
@@ -30,11 +27,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-        PeripheralManagerService service = new PeripheralManagerService();
         try {
-            mLedGpio = service.openGpio(PIN_NAME);
+            mLedGpio = PeripheralManager.getInstance().openGpio(PIN_NAME);
             mLedGpio.setDirection(Gpio.DIRECTION_OUT_INITIALLY_LOW);
 
             mHandler.post(mBlinkRunnable);
@@ -75,6 +70,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-
-
 ```
