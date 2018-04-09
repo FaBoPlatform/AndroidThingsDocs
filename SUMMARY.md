@@ -11,6 +11,8 @@
 	* [Color](color.md)
 	* [Color UI](colorui.md)
 	* [Color UI2](colorui2.md)
+* Robot
+	* [6DOF RObotARM](robotarm.md)
 * UI
 	* [FindViewById](ui01.md)
 	* [UI Layout1](ui02.md)
