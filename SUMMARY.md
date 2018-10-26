@@ -1,4 +1,5 @@
 * [はじめに](README.md)
+* [Android ThinsのUpdate](update.md)
 * [Peripheral I/O](peripheral.md)
 * GPIO
 	* [Button](button.md)
