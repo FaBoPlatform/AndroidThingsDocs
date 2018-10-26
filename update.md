@@ -38,3 +38,16 @@ $ sudo android-things-setup-utility
 
 Windowsは管理者の権限で、android-things-setup-utility.exe を実行
 
+
+## flash-all.shでのインストール
+
+```
+$ adb reboot bootloader
+```
+
+Fastboot modeで
+
+```
+$ flash-all.sh
+```
+
