@@ -6,17 +6,41 @@ I2Cに3Axisを接続し、100ms毎に加速度を取得。
 
 
 ```java
-package com.gclue.myapplication;
+package com.example.vssadmin.myapplication;
 
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
+
+import com.google.android.things.pio.Gpio;
+import com.google.android.things.pio.GpioCallback;
 import com.google.android.things.pio.I2cDevice;
-import com.google.android.things.pio.PeripheralManagerService;
+import com.google.android.things.pio.PeripheralManager;
+
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Skeleton of an Android Things activity.
+ * <p>
+ * Android Things peripheral APIs are accessible through the class
+ * PeripheralManagerService. For example, the snippet below will open a GPIO pin and
+ * set it to HIGH:
+ *
+ * <pre>{@code
+ * PeripheralManagerService service = new PeripheralManagerService();
+ * mLedGpio = service.openGpio("BCM6");
+ * mLedGpio.setDirection(Gpio.DIRECTION_OUT_INITIALLY_LOW);
+ * mLedGpio.setValue(true);
+ * }</pre>
+ * <p>
+ * For more complex peripherals, look for an existing user-space driver, or implement one if none
+ * is available.
+ *
+ * @see <a href="https://github.com/androidthings/contrib-drivers#readme">https://github.com/androidthings/contrib-drivers#readme</a>
+ */
+public class MainActivity extends Activity {
+
     // I2C Device Name
     private static final String I2C_DEVICE_NAME = "I2C1";
     // I2C Slave Address
@@ -87,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // Attempt to access the I2C device
         try {
-            PeripheralManagerService manager = new PeripheralManagerService();
+            PeripheralManager manager = PeripheralManager.getInstance();
             mDevice = manager.openI2cDevice(I2C_DEVICE_NAME, I2C_ADDRESS);
         } catch (IOException e) {
             Log.w(TAG, "Unable to access I2C device", e);
