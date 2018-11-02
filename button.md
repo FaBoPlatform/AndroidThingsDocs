@@ -1,6 +1,6 @@
 # Button
 
-GPIO16にButtonブリックを接続する。
+GPIO22に差し込み、GPIO1_IO10を指定
 
 ## ソース
 
@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
 
     private final static String TAG = "THINGS";
     private Gpio mButtonGpio;
-    private String PIN_NAME = "GPIO_39";
+    private String PIN_NAME = "GPIO1_IO10";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
