@@ -1,6 +1,7 @@
-# Button
+# LED
 
-GPIO4にLEDブリックを接続し、1秒ごとにLEDを点滅。
+GPIO22にLEDブリックを接続し、GPIO1_IO10を指定
+1秒ごとにLEDを点滅。
 
 ## ソース
 
@@ -19,7 +20,7 @@ public class MainActivity extends Activity {
 
     private final static String TAG = "THINGS";
     private Gpio mLedGpio;
-    private String PIN_NAME = "BCM4";
+    private String PIN_NAME = "GPIO1_IO10";
     private Handler mHandler = new Handler();
     private static final int INTERVAL_BETWEEN_BLINKS_MS = 1000;
     private Boolean trigger = false;
@@ -71,3 +72,4 @@ public class MainActivity extends Activity {
     }
 }
 ```
+
