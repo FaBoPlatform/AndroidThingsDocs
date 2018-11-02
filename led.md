@@ -73,3 +73,24 @@ public class MainActivity extends Activity {
 }
 ```
 
+AndroidManifest.xmlに<uses-permission android:name="com.google.android.things.permission.USE_PERIPHERAL_IO" /> を追加 
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vssadmin.myapplication">
+    <uses-permission android:name="com.google.android.things.permission.USE_PERIPHERAL_IO" />
+    <application android:label="@string/app_name">
+        <uses-library android:name="com.google.android.things" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+```
