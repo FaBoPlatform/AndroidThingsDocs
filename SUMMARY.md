@@ -13,6 +13,8 @@
 	* [Color](color.md)
 	* [Color UI](colorui.md)
 	* [Color UI2](colorui2.md)
+* FaBo Lib
+	* [ライブラリを組み込む](lib.md)
 * Robot
 	* [6DOF RObotARM](robotarm.md)
 * UI
