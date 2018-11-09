@@ -34,7 +34,7 @@ dependencies {
 }
 ```
 
-![](./img/lib001.png)
+![](./img/lib002.png)
 
 
 ## AndroidManifest
