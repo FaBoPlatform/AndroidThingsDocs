@@ -3,7 +3,7 @@
 自作したDriverは、UserDriverとしてアプリに組み込む事が可能です。
 
 Adx345.java
-```
+```java
 package com.gclue.adx345;
 
 import com.google.android.things.pio.I2cDevice;
@@ -208,7 +208,7 @@ public class Adx345 implements AutoCloseable {
 ```
 
 Adx345AccelerometerDriver.java
-```
+```java
 package com.gclue.adx345;
 
 import android.hardware.Sensor;
@@ -315,7 +315,7 @@ public class Adx345AccelerometerDriver implements AutoCloseable {
 ```
 
 BoardDefault.java
-```
+```java
 package com.gclue.adx345;
 
 /*
@@ -361,7 +361,7 @@ public class BoardDefaults {
 ```
 
 MainActivity.java
-```
+```java
 package com.gclue.adx345;
 
 import android.app.Activity;
@@ -457,7 +457,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 
 
 AndroidManifest.xml
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gclue.adx345">

@@ -15,6 +15,9 @@
 	* [Color UI2](colorui2.md)
 * FaBo Lib
 	* [ライブラリを組み込む](lib.md)
+	* [#201 3Axis](201_3axis.md)
+	* [#203 Color](203_color.md)
+	* [#217 Ambient](217_ambient.md)
 * Robot
 	* [6DOF RObotARM](robotarm.md)
 * UI
