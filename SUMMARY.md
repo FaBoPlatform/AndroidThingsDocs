@@ -17,6 +17,7 @@
 	* [ライブラリを組み込む](lib.md)
 	* [#201 3Axis](201_3axis.md)
 	* [#203 Color](203_color.md)
+	* [#206 UV Index](206_uv.md)
 	* [#217 Ambient](217_ambient.md)
 	* [#218]
 * Robot
