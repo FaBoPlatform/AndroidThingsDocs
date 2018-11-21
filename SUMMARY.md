@@ -20,6 +20,8 @@
 	* [#206 UV Index](206_uv.md)
 	* [#217 Ambient](217_ambient.md)
 	* [#218]
+* UART
+	* [UART](uart.md)
 * Robot
 	* [6DOF RObotARM](robotarm.md)
 * UI
