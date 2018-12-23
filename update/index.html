@@ -1,0 +1,804 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="クリップボードへコピー">
+      
+        <meta name="lang:clipboard.copied" content="コピーしました">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="何も見つかりませんでした">
+      
+        <meta name="lang:search.result.one" content="1件見つかりました">
+      
+        <meta name="lang:search.result.other" content="#件見つかりました">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>Android Things Console - FaBo Android Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.11e41852.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#android-things-console" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="FaBo Android Docs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                FaBo Android Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Android Things Console
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            検索キーワードを入力してください
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="FaBo Android Docs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    FaBo Android Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="IoT docs" class="md-nav__link">
+      IoT docs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../201_3axis/" title="201 3Axis" class="md-nav__link">
+      201 3Axis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../203_color/" title="203 Color" class="md-nav__link">
+      203 Color
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../206_uv/" title="206 UV" class="md-nav__link">
+      206 UV
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../217_ambient/" title="201 3Axis" class="md-nav__link">
+      201 3Axis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../3axis/" title="3Axis" class="md-nav__link">
+      3Axis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../3axisui/" title="3Axis" class="md-nav__link">
+      3Axis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../SUMMARY/" title="SUMMARY" class="md-nav__link">
+      SUMMARY
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../button/" title="Button" class="md-nav__link">
+      Button
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../color/" title="Color" class="md-nav__link">
+      Color
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../colorui/" title="Color" class="md-nav__link">
+      Color
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../colorui2/" title="Color" class="md-nav__link">
+      Color
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../intent00/" title="Intent" class="md-nav__link">
+      Intent
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../intent01/" title="暗黙的Intent" class="md-nav__link">
+      暗黙的Intent
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../intent03/" title="Intentでカメラを操作" class="md-nav__link">
+      Intentでカメラを操作
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../intent04/" title="Intentでビデオを操作" class="md-nav__link">
+      Intentでビデオを操作
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../intent05/" title="Intentを作成する" class="md-nav__link">
+      Intentを作成する
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../led/" title="LED" class="md-nav__link">
+      LED
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../lib/" title="FaBo libtary" class="md-nav__link">
+      FaBo libtary
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../peripheral/" title="Peripheral" class="md-nav__link">
+      Peripheral
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../robotarm/" title="RobotARM" class="md-nav__link">
+      RobotARM
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../servo/" title="Servo" class="md-nav__link">
+      Servo
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../uart/" title="UART" class="md-nav__link">
+      UART
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ui01/" title="FindViewById" class="md-nav__link">
+      FindViewById
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ui02/" title="XMLでのLayout" class="md-nav__link">
+      XMLでのLayout
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ui03/" title="XMLでのLayout2" class="md-nav__link">
+      XMLでのLayout2
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ui04/" title="Button" class="md-nav__link">
+      Button
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ui05/" title="TextView" class="md-nav__link">
+      TextView
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ui06/" title="EditText" class="md-nav__link">
+      EditText
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ui07/" title="電卓の作成" class="md-nav__link">
+      電卓の作成
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Android Things Console
+      </label>
+    
+    <a href="./" title="Android Things Console" class="md-nav__link md-nav__link--active">
+      Android Things Console
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup-utility" title="Setup Utility" class="md-nav__link">
+    Setup Utility
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#android-things-update" title="Android Things Update" class="md-nav__link">
+    Android Things Update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flash-allsh" title="flash-all.shでのインストール" class="md-nav__link">
+    flash-all.shでのインストール
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../userdriver/" title="UserDriver" class="md-nav__link">
+      UserDriver
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../webview01/" title="WebView表示" class="md-nav__link">
+      WebView表示
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup-utility" title="Setup Utility" class="md-nav__link">
+    Setup Utility
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#android-things-update" title="Android Things Update" class="md-nav__link">
+    Android Things Update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flash-allsh" title="flash-all.shでのインストール" class="md-nav__link">
+    flash-all.shでのインストール
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="android-things-console">Android Things Console</h1>
+<p>https://partner.android.com/things/console/</p>
+<h2 id="setup-utility">Setup Utility</h2>
+<p>https://partner.android.com/things/console/u/0/?pli=1#/tools</p>
+<p><img alt="" src="../img/utility.png" /></p>
+<h2 id="android-things-update">Android Things Update</h2>
+<p>OSXは、AndroidSDK¥platform-toolsにパスを通しておく。</p>
+<div class=md-fenced-code-tabs id=tab-tab-group-0><input name=tab-group-0 type=radio id=tab-group-0-0_ok17p0o05gz0hw4 checked=checked class=code-tab data-lang aria-controls=tab-group-0-0_ok17p0o05gz0hw4-panel role=tab><label for=tab-group-0-0_ok17p0o05gz0hw4 class=code-tab-label data-lang id=tab-group-0-0_ok17p0o05gz0hw4-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-0_ok17p0o05gz0hw4-panel aria-labelledby=tab-group-0-0_ok17p0o05gz0hw4-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/.bash_profile
+</pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-1_93iyqfvx700kahd class=code-tab data-lang aria-controls=tab-group-0-1_93iyqfvx700kahd-panel role=tab><label for=tab-group-0-1_93iyqfvx700kahd class=code-tab-label data-lang id=tab-group-0-1_93iyqfvx700kahd-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-1_93iyqfvx700kahd-panel aria-labelledby=tab-group-0-1_93iyqfvx700kahd-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span>...
+export ANDROID_TOOL=/Users/akira/Library/Android/sdk/platform-tools
+...
+export PATH=$PATH:$ANDROID_TOOL
+</pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-2_rt5pa97nq3bz5u7 class=code-tab data-lang aria-controls=tab-group-0-2_rt5pa97nq3bz5u7-panel role=tab><label for=tab-group-0-2_rt5pa97nq3bz5u7 class=code-tab-label data-lang id=tab-group-0-2_rt5pa97nq3bz5u7-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-2_rt5pa97nq3bz5u7-panel aria-labelledby=tab-group-0-2_rt5pa97nq3bz5u7-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>source ~/.bash_profile
+</pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-3_u0khtkuitsdvii6 class=code-tab data-lang aria-controls=tab-group-0-3_u0khtkuitsdvii6-panel role=tab><label for=tab-group-0-3_u0khtkuitsdvii6 class=code-tab-label data-lang id=tab-group-0-3_u0khtkuitsdvii6-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-3_u0khtkuitsdvii6-panel aria-labelledby=tab-group-0-3_u0khtkuitsdvii6-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>echo $PATH
+</pre></div></td></tr></table></div></div>
+
+<p>OSX</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ sudo android-things-setup-utility
+</pre></div></td></tr></table></p>
+<p>Windowsは管理者の権限で、android-things-setup-utility.exe を実行</p>
+<h2 id="flash-allsh">flash-all.shでのインストール</h2>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ adb reboot bootloader
+</pre></div></td></tr></table></p>
+<p>Fastboot modeで</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ flash-all.sh
+</pre></div></td></tr></table></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../ui07/" title="電卓の作成" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                電卓の作成
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../userdriver/" title="UserDriver" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                UserDriver
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.9e1f3b71.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
